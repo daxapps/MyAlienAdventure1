@@ -12,15 +12,18 @@ extension Hero {
         
         var itemWithMR = [UDItem]()
         
-        for item in inventory {
+        if inventory.count != 0 {
             
-            if item.name == "MoonRock" {
+            for item in inventory {
                 
-                itemWithMR.append(item)
+                if item.name == "MoonRock" {
+                    
+                    itemWithMR.append(item)
+                }
             }
         }
-        
         return [UDItem](itemWithMR)
+    
     }
 }
 
