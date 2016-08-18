@@ -9,7 +9,18 @@
 extension Hero {
     
     func inscriptionEternalStar(inventory: [UDItem]) -> UDItem? {
-        return nil
+        
+        var itemInscription = UDItem?()
+        
+        for item in inventory {
+            
+            if ((item.inscription?.containsString("THE ETERNAL STAR")) != nil) {
+                
+                itemInscription = item
+            }
+            
+        }
+        return itemInscription
     }
 }
 
